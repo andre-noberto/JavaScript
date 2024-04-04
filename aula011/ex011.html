@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+</head>
+<body>
+    <h1>Você é estrangeiro?</h1>
+    Onde você nasceu? <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div class="res"></div>
+
+    <script>
+        function verificar() {
+            var t = document.querySelector('input#txtp')
+            var r = document.querySelector('div.res')
+
+            r.innerHTML = `<p>Você nasceu no ${t.value}</p>`
+            
+            if (t.value == 'brasil') {
+                r.innerHTML += '<p>Você é Brasileiro!</p>'
+            } else {
+                r.innerHTML += '<p>Você é Estrangeiro!<p>'
+            } 
+        }
+        
+    </script>
+</body>
+</html>
